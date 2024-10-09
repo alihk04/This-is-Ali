@@ -16,36 +16,27 @@ body {
 }
 
 .topbar .logo a {
+    color: #f39c12;
     font-size: 24px;
-    color: #fff;
     text-decoration: none;
-    font-weight: bold; /* Makes the logo text stand out more */
 }
 
-.topbar nav ul {
+.nav-links {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
 }
 
-.topbar nav ul li {
-    margin: 0 15px; /* Increased spacing between items for a cleaner look */
+.nav-links li {
+    margin-left: 20px;
 }
 
-.topbar nav ul li a {
+.nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-
+    color: #ddd;
 }
 
 .topbar nav ul li a.active {
     color: #0b2fbb; /* Active and hover state color */
-}
-.topbar .contact-info p {
-    color: #fff;
 }
 body {
     background-color: #222;

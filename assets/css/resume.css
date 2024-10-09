@@ -10,6 +10,7 @@ body, html {
 }
 
 /* Topbar styles */
+
 .topbar {
     background-color: #333;
     padding: 10px 20px;
@@ -39,10 +40,9 @@ body, html {
     color: #ddd;
 }
 
-.nav-links a.active {
-    color: #f39c12;
+.topbar nav ul li a.active {
+    color: #0b2fbb; /* Active and hover state color */
 }
-
 /* Circle Navigation styles */
 .circle-navigation {
     display: flex;
