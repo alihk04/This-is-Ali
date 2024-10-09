@@ -32,11 +32,11 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #ddd;
+    color: #ddd; /* Standard farve for linkene */
 }
 
-.topbar nav ul li a.active {
-    color: #0b2fbb; /* Active and hover state color */
+.nav-links a.active {
+    color: #f39c12; /* Farve for den aktive side */
 }
 body {
     background-color: #222;

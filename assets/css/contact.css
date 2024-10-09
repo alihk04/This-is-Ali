@@ -1,14 +1,23 @@
-/* Topbar */
+/* Global baggrundsfarve for hele siden */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #fff;
+}
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 50px; /* Adjusted padding for better spacing */
     background-color: #2c2c2c;
+    border-bottom: 2px solid #444; /* Add a border to differentiate from the rest of the page */
 }
 
+
 .topbar .logo a {
-    color: #f39c12;
+    color: #fff; /* Ændret til hvid */
     font-size: 24px;
     text-decoration: none;
 }
@@ -24,57 +33,58 @@
 
 .nav-links a {
     text-decoration: none;
-    color: #ddd;
+    color: #ddd; /* Standard farve for linkene */
 }
 
-.topbar nav ul li a.active {
-    color: #0b2fbb; /* Active and hover state color */
+.nav-links a.active {
+    color: #f39c12; /* Farve for den aktive side */
 }
-/* Contact Section Styling */
-.contact-section {
+
+/* Kontakt sektion styling */
+#contact {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #2c2c2c;
+    padding: 30px;
+    background-color: #525252; /* Mørk baggrund for kontaktformularen */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     text-align: left;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 20px auto; /* Center sektionen */
 }
 
-/* Styling for the contact form */
-.contact-section form {
+/* Styling for kontaktformular */
+#contact form {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 15px; /* Space between form elements */
+    flex-direction: column;
+    gap: 15px;
 }
 
 /* Styling for labels */
-.contact-section label {
+#contact label {
     margin-bottom: 5px;
     color: #f0f0f0;
 }
 
-/* Input fields styling */
-.contact-section input[type="text"],
-.contact-section input[type="email"],
-.contact-section textarea {
-    width: 100%; /* Full width of the parent container */
+/* Input felter styling */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
     padding: 10px;
-    background-color: #1b1b1b;
+    background-color: #909090;
     border: 1px solid #444;
     border-radius: 4px;
     color: #fff;
 }
 
-/* Specific styling for the message box */
-.contact-section textarea {
-    height: 100px; /* Set a fixed height for the message box */
+/* Specific styling for beskedfeltet */
+#contact textarea {
+    height: 100px;
 }
 
-/* Send button styling */
-.contact-section button {
-    align-self: flex-start; /* Align the button to the start of the form */
+/* Send knap styling */
+#contact button {
+    align-self: flex-start;
     background-color: #0b2fbb;
     color: #fff;
     padding: 10px 20px;
@@ -84,6 +94,6 @@
     transition: background-color 0.3s ease;
 }
 
-.contact-section button:hover {
+#contact button:hover {
     background-color: #f39c12;
 }

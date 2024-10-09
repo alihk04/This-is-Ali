@@ -42,11 +42,11 @@ html, body {
 
 .nav-links a {
     text-decoration: none;
-    color: #ddd;
+    color: #ddd; /* Standard farve for linkene */
 }
 
-.topbar nav ul li a.active {
-    color: #0b2fbb; /* Active and hover state color */
+.nav-links a.active {
+    color: #f39c12; /* Farve for den aktive side */
 }
 
 /* Hero section */
@@ -85,63 +85,6 @@ html, body {
     transform: translateY(-10px);
 }
 
-/* Contact Section Styling */
-.contact-section {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #2c2c2c;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-/* Styling for the contact form */
-.contact-section form {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 15px; /* Space between form elements */
-}
-
-/* Styling for labels */
-.contact-section label {
-    margin-bottom: 5px;
-    color: #f0f0f0;
-}
-
-/* Input fields styling */
-.contact-section input[type="text"],
-.contact-section input[type="email"],
-.contact-section textarea {
-    width: 100%; /* Full width of the parent container */
-    padding: 10px;
-    background-color: #1b1b1b;
-    border: 1px solid #444;
-    border-radius: 4px;
-    color: #fff;
-}
-
-/* Specific styling for the message box */
-.contact-section textarea {
-    height: 100px; /* Set a fixed height for the message box */
-}
-
-/* Send button styling */
-.contact-section button {
-    align-self: flex-start; /* Align the button to the start of the form */
-    background-color: #0b2fbb;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-section button:hover {
-    background-color: #f39c12;
-}
 
 /* Footer styling to stay at the bottom */
 footer {
