@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mit Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="logo">
+            <a href="index.html">Ali Hassan Khan</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Sektion -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Bachelor of Engineering (IT and Economics)</h2>
+            <h1>Ali Hassan Khan</h1>
+            <p>Project management / UI-UX / Cybersecurity / Figma / WebDesign / Scrummaster / Easy learner</p>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/IMG_6024.JPG" alt="Profilbillede">
+        </div>
+    </section>
+
+   <!-- Kontakt Sektion -->
+<section id="contact">
+    <h2>Contact</h2>
+    <form action="submit-form.php" method="POST">
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Besked:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+
+    <footer>
+        <p>&copy; 2024 Ali Hassan Khan. Alle rettigheder forbeholdes.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

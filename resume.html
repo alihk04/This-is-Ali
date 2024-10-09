@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="assets/css/resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <header class="topbar">
+        <div class="logo">
+            <a href="index.html">Ali Hassan Khan</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+            </ul>                  
+        </nav>
+    </header>
+
+    <!-- Circle Navigation -->
+    <div class="circle-navigation">
+        <div class="circle" data-target="#education-section">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+        </div>
+        <div class="circle" data-target="#experience-section">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+        </div>
+        <div class="circle" data-target="#skills-section">
+            <i class="fas fa-tools"></i>
+            <span>Skills</span>
+        </div>
+        <div class="circle" data-target="#languages-section">
+            <i class="fas fa-language"></i>
+            <span>Languages</span>
+        </div>
+        <div class="circle" id="download-cv">
+            <i class="fas fa-file-download"></i>
+            <span>CV</span>
+        </div>
+    </div>
+
+    <!-- CV Download Popup -->
+    <div id="cv-download-popup" class="cv-popup" style="display: none;">
+        <h3>Select CV to Download</h3>
+        <ul>
+            <li><a href="assets/files/CV-Dansk.pdf" download="CV-Dansk.pdf">Download CV (Danish)</a></li>
+            <li><a href="assets/files/CV-Engelsk.pdf" download="CV-Engelsk.pdf">Download CV (English)</a></li>
+        </ul>
+    </div>
+    <!-- Resume Sections -->
+    <section id="resume">
+        <h1>Ali Hassan Khan's Resume</h1>
+
+        <!-- Education Section -->
+        <div id="education-section" class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <p><strong>Danmarks Tekniske Universitet:</strong> Professionsbachelor - IT og Økonomi Ingeniør</p>
+            <p><strong>Sukkertoppen Gymnasium:</strong> Studieretning: Teknologi A, Design B</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div id="experience-section" class="section">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <div class="job">
+                <h3>IT-Ansvarlig - Aero North</h3>
+                <p><em>2023 - Nuværende</em></p>
+                <ul>
+                    <li>Optimerede produktionsprocesser ved at implementere IT-løsninger.</li>
+                    <li>Skabte DTO-rapporter og håndterede underbilag fra handlingselskaber.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Studentermedhjælper UI/UX - Drivn</h3>
+                <p><em>2023 - Nuværende</em></p>
+                <ul>
+                    <li>Optimerede brugeroplevelsen (UX) og brugergrænsefladerne (UI) på digitale platforme.</li>
+                    <li>Udførte brugerundersøgelser, skabte wireframes og testede UI-elementer.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills-section" class="section">
+            <h2><i class="fas fa-tools"></i> Skills</h2>
+            <canvas id="skillsCanvas"></canvas>
+            <a href="#" id="showListBtn" class="show-list-btn">Get a Complete List</a>
+            <div id="fullList" class="full-list" style="display: none;">
+                <ul>
+                    <li>MS Office</li>
+                    <li>React</li>
+                    <li>Java</li>
+                    <li>MySQL</li>
+                    <li>R-Studio</li>
+                    <li>UML</li>
+                    <li>Project Management</li>
+                    <li>Figma</li>
+                    <li>Android Studio</li>
+                    <li>SAP</li>
+                    <li>Planday</li>
+                    <li>Projektledelse</li>
+                    <li>Flexible</li>
+                    <li>UI Design</li>
+                    <li>Cybersikkerhed</li>
+                    <li>Creative</li>
+                    <li>Problemsolver</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages-section" class="section">
+        <h2 style="color: #f39c12;"><i class="fas fa-language"></i> Languages</h2>
+        <div class="language-section">
+            <!-- Danish -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg" alt="Danish Flag" class="flag-icon">
+                <h3>Danish</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 100%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 100%;"></div></div>
+                <small>Writing</small>
+            </div>
+            <!-- English -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English Flag" class="flag-icon">
+                <h3>English</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 95%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 95%;"></div></div>
+                <small>Writing</small>
+            </div>
+            <!-- Urdu -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Urdu Flag" class="flag-icon">
+                <h3>Urdu</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 70%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 40%;"></div></div>
+                <small>Writing</small>
+            </div>
+            <!-- Punjabi -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Indian Flag" class="flag-icon">
+                <h3>Punjabi</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 70%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 40%;"></div></div>
+                <small>Writing</small>
+            </div>
+            <!-- Spanish -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="Spanish Flag" class="flag-icon">
+                <h3>Spanish Coming soon..</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                <small>Writing</small>
+            </div>
+            <!-- Arabic -->
+            <div class="language-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Arabic Flag" class="flag-icon">
+                <h3>Arabic Coming soon..</h3>
+                <div class="skill-bar"><div class="bar-fill" style="width: 5%;"></div></div>
+                <small>Speaking</small>
+                <div class="skill-bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                <small>Writing</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ali Hassan Khan. Alle rettigheder forbeholdes.</p>
+    </footer>
+
+    <script src="assets/js/resume.js">
+    </script>
+</body>
+</html>
