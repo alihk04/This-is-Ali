@@ -2,19 +2,46 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min AI</title>
-    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Tilføj din egen CSS, hvis du har en -->
+    <title>AI Chat</title>
+
+    <!-- Tilføj TensorFlow.js fra et CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs" async defer></script>
+    
+    <!-- Tilføj lidt CSS styling for at forbedre layoutet -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        #chat-box {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: calc(100% - 70px);
+            padding: 10px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="chat-container">
-        <h1>Chat med Min AI</h1>
-        <div id="chat-box"></div>
-        <input type="text" id="user-input" placeholder="Skriv en besked..." />
-        <button onclick="sendMessage()">Send</button>
-    </div>
+    <h1>Chat med AI</h1>
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Skriv en besked...">
+    <button onclick="sendMessage()">Send</button>
 
-    <script src="js/AI.js"></script> <!-- Link til din AI.js-fil -->
+    <!-- Inkluder ai.js med 'async' og 'defer' for at sikre, at det indlæses efter HTML -->
+    <script src="assets/js/ai.js" async defer></script>
 </body>
 </html>
