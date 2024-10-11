@@ -2,7 +2,9 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
     "express": "^4.21.1",
+    "natural": "^8.0.1",
     "use-dark-mode": "^2.3.1"
   },
   "name": "this-is-ali",

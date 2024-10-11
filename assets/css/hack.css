@@ -1,0 +1,136 @@
+
+/* assets/css/hack.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+button {
+    background-color: #0b2fbb;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+}
+
+#user-input {
+    margin-top: 10px;
+    padding: 8px;
+    width: calc(100% - 20px);
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#timer {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+#score, #level {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.help-table-container {
+    margin-top: 20px;
+}
+
+.help-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.help-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.help-table th, .help-table td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: center;
+}
+
+.help-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2c2c2c;
+    border-bottom: 2px solid #444;
+}
+
+.topbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.nav-links a.active {
+    color: #f39c12;
+}
+
+footer {
+    background-color: #2c2c2c;
+    padding: 30px 0;
+    color: #f0f0f0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}

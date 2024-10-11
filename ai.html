@@ -5,43 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Chat</title>
 
+    <!-- Link til den eksterne CSS-fil -->
+    <link rel="stylesheet" href="assets/css/ai.css">
+
     <!-- Tilføj TensorFlow.js fra et CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs" async defer></script>
-    
-    <!-- Tilføj lidt CSS styling for at forbedre layoutet -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f0f0;
-        }
-        #chat-box {
-            width: 100%;
-            max-width: 600px;
-            height: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            background-color: #fff;
-            overflow-y: auto;
-            margin-bottom: 10px;
-        }
-        input[type="text"] {
-            width: calc(100% - 70px);
-            padding: 10px;
-            margin-right: 10px;
-        }
-        button {
-            padding: 10px;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs" defer></script>
 </head>
 <body>
+   <!-- Topbar -->
+   <header class="topbar">
+    <div class="logo">
+        <a href="index.html">Ali Hassan Khan</a>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html"class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact me</a></li>
+        </ul>            
+    </nav>
+</header>
+
+    <!-- Chat Section -->
     <h1>Chat med AI</h1>
     <div id="chat-box"></div>
     <input type="text" id="user-input" placeholder="Skriv en besked...">
     <button onclick="sendMessage()">Send</button>
 
-    <!-- Inkluder ai.js med 'async' og 'defer' for at sikre, at det indlæses efter HTML -->
-    <script src="assets/js/ai.js" async defer></script>
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Min AI Chat. Alle rettigheder forbeholdt.
+    </footer>
+
+    <!-- Inkluder ai.js med 'defer' for at sikre, at det indlæses efter HTML -->
+    <script src="assets/js/ai.js" defer></script>
 </body>
 </html>

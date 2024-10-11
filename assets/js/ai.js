@@ -12,15 +12,14 @@ async function sendMessage() {
             return;
         }
 
-        const response = await fetch('http://localhost:3000/api/chat', {
+        // Send POST-anmodning til serveren
+        const response = await fetch('http://localhost:3000/api/chat', { // Sørg for at URL'en matcher din server's adresse
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ message: userInput }),
         });
-        
-        
 
         // Tjek om svaret fra serveren er OK
         if (!response.ok) {

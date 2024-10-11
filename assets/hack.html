@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krypteringsspil - Lær om Kryptering!</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/hack.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Krypteringsspil</h1>
+        <p>Prøv at kryptere eller dekryptere en simpel besked!</p>
+        <div id="crypto-selection">
+            <button id="encrypt-btn">Krypter Besked</button>
+            <button id="decrypt-btn">Dekrypter Besked</button>
+        </div>
+        <div id="crypto-content" style="display: none;">
+            <div id="crypto-task"></div>
+            <input type="text" id="user-input" placeholder="Indtast din løsning her">
+            <button id="submit-btn">Indsend</button>
+        </div>
+        <div id="feedback" style="display: none;"></div>
+    </div>
+    <script src="/assets/js/hack.js" defer></script>
+</body>
+</html>
