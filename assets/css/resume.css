@@ -5,19 +5,38 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: #fff;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure the content fits within the viewport */
+    overflow-x: hidden;
+    width: 100%;
+}
+/* For Google Chrome og andre WebKit-browsere */
+::-webkit-scrollbar {
+    width: 12px; /* Ændrer bredden på scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2b2b; /* Farve for scrollbarrens baggrund */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff8c00; /* Scrollbar-farve */
+    border-radius: 10px; /* Runder kanterne på scrollbaren */
+    border: 2px solid #2b2b2b; /* Matcher farven på baggrunden */
+}
+
+/* For Mozilla Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ff8c00 #2b2b2b;
 }
 
 /* Topbar styles */
-
 .topbar {
     background-color: #333;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%; /* Ensure the topbar does not overflow */
+    max-width: 100%;
 }
 
 .topbar .logo a {
@@ -37,18 +56,19 @@ body, html {
 
 .nav-links a {
     text-decoration: none;
-    color: #ddd; /* Standard farve for linkene */
+    color: #ddd;
 }
 
 .nav-links a.active {
-    color: #f39c12; /* Farve for den aktive side */
+    color: #f39c12;
 }
+
 /* Circle Navigation styles */
 .circle-navigation {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    flex-wrap: wrap; /* Ensure circles stay within the viewport */
+    flex-wrap: wrap;
 }
 
 .circle {
@@ -77,12 +97,12 @@ body, html {
 
 /* Section styles */
 .section {
-    margin: 40px auto; /* Center the section horizontally */
+    margin: 40px auto;
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 90%; /* Ensure the section stays within viewport */
+    max-width: 90%;
 }
 
 .section h2 {
@@ -92,8 +112,84 @@ body, html {
     margin-bottom: 20px;
 }
 
-.job, .education-item {
-    margin-bottom: 20px;
+/* Timeline styles */
+.timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 40px;
+    border-left: 2px solid #f39c12;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f39c12 #333;
+    scroll-behavior: smooth;
+}
+
+.timeline::-webkit-scrollbar {
+    width: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background-color: #f39c12;
+    border-radius: 4px;
+}
+
+.timeline-entry {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.timeline-entry::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #f39c12;
+    border-radius: 50%;
+    border: 3px solid #2a2a2a;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.timeline-logo {
+    margin-bottom: 10px;
+}
+
+.timeline-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.timeline-content {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content h3 {
+    color: #f39c12;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+
+.timeline-content ul {
+    list-style: disc;
+    margin-left: 20px;
 }
 
 /* Skills Section */
@@ -101,23 +197,7 @@ body, html {
     background-color: #1a1a1a;
     border: 2px solid #f39c12;
     border-radius: 8px;
-    max-width: 100%; /* Ensure canvas fits within viewport */
-}
-
-.full-list {
-    margin-top: 20px;
-}
-
-.full-list ul {
-    list-style: none;
-    padding: 0;
-}
-
-.full-list ul li {
-    background-color: #333;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 4px;
+    max-width: 100%;
 }
 
 /* Languages Section */
@@ -167,35 +247,20 @@ footer {
     width: 100%;
 }
 
-/* Position and style for the "Get a Complete List" button */
-.show-list-btn {
-    display: inline-block;
-    position: absolute;
-    top: 950px; /* Adjust this value to your desired vertical positioning */
-    right: 50px; /* Adjust this value to your desired horizontal positioning */
-    color: #f39c12; /* Orange color */
-    background: none; /* Remove the background */
-    border: none; /* Remove any border */
-    cursor: pointer; /* Show pointer on hover */
-    font-size: 16px; /* Adjust text size as needed */
-    text-decoration: none; /* Remove underline */
-}
-
-.show-list-btn:hover {
-    text-decoration: underline; /* Add underline on hover for a clickable look */
-}
-
 /* CV Download Popup styling */
 .cv-popup {
-    position: absolute;
-    top: 150px; /* Adjust the positioning as necessary */
-    right: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #333;
     padding: 15px;
     border: 2px solid #f39c12;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    width: 90%;
+    max-width: 400px;
 }
 
 .cv-popup h3 {
@@ -220,4 +285,79 @@ footer {
 
 .cv-popup ul li a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .circle-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle i {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    #skillsCanvas {
+        height: 200px;
+    }
+
+    .language-item {
+        width: 120px;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .circle-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    #skillsCanvas {
+        height: 300px;
+    }
 }
