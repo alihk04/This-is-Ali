@@ -1,12 +1,26 @@
-// Få den nuværende URL-path
-const currentPath = window.location.pathname;
+document.getElementById('contact-form').addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-// Vælg alle navigationslinks
-const navLinks = document.querySelectorAll('.nav-link');
+    try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
 
-// Loop igennem hvert link og tilføj 'active' klassen, hvis linkets href matcher den nuværende URL
-navLinks.forEach(link => {
-    if (link.href.includes(currentPath)) {
-        link.classList.add('active');
+        if (response.ok) {
+            const result = await response.json();
+            alert(result.reply);
+        } else {
+            alert('Der opstod en fejl ved afsendelse af beskeden. Prøv venligst igen senere.');
+        }
+    } catch (error) {
+        console.error('Fejl ved afsendelse af besked:', error);
+        alert('Der opstod en fejl ved afsendelse af beskeden. Prøv venligst igen senere.');
     }
 });

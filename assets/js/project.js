@@ -8,7 +8,7 @@ const projectDetails = [
     },
     {
         description: "RoboRally focuses on robotics and AI implementation, building a platform for interactive games using machine learning.",
-        technologies: "Python, TensorFlow, OpenCV",
+        technologies: "ROBOFLOW, MACHINE LEARNING,Python, TensorFlow, OpenCV",
         images: ["assets/images/RB1.jpg"]
     },
     {
@@ -17,20 +17,22 @@ const projectDetails = [
         images: ["assets/images/FR1.jpg", "assets/images/FR2.jpg", "assets/images/FR3.jpg"]
     },
     {
-        description: "Project 4 was a collaborative effort to create a mobile application that brings efficiency and style to everyday tasks...",
-        technologies: "React Native, Firebase",
-        images: ["https://via.placeholder.com/150"]
+        "description": "Project 4 involved developing my own website, which also serves as my CV. The project was a fun way to explore new skills, experiment with design, and showcase my personal and professional experiences.",
+        "technologies": "Python, Big Data, Cloud Computing, Containerization, NLP",
+        "images": ["assets/images/website_project.jpg"]
     },
     {
-        description: "Project 5 involved data analysis using machine learning techniques, aimed at providing accurate predictions and insights...",
-        technologies: "Python, Scikit-Learn, Pandas",
-        images: ["https://via.placeholder.com/150"]
-    },
+        "description": "This Project involved creating a chat feature where users can interact with an AI that answers questions about the Me and provides general knowledge responses.",
+        "technologies": "HTML, JavaScript, CSS, Node.js",
+        "images": ["assets/images/ai.jpg"]
+    },   
     {
-        description: "Project 6 focused on cybersecurity enhancements, implementing secure authentication protocols and data encryption...",
-        technologies: "Java, Spring Boot, MySQL",
-        images: ["https://via.placeholder.com/150"]
+        "description": "Project 6 focused on building an AI application that allows users to create their own characters, complete with a personalized voice, ensuring they always have a virtual companion on their phone.",
+        "technologies": "Java, Spring Boot, MySQL, AI Voice Synthesis",
+        "images": ["assets/images/ai.jpg"]
     }
+    
+    
 ];
 
 let currentIndex = 0;
